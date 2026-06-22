@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://serverwale.github.io/server-buying-guides-india/sitemap.xml
+Sitemap: https://serverwale-server-guides.surge.sh/sitemap-surge.xml
+Sitemap: https://serverwale-guides.pages.dev/sitemap-pagesdev.xml
+Sitemap: https://serverwale-guides.vercel.app/sitemap-vercel.xml
