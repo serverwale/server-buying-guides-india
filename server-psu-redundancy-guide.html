@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Server Power Supply Redundancy: N+1 vs N+N Explained (2026)</title><meta name="description" content="Server PSU redundancy explained — N+1 vs N+N, why it matters for uptime, and how to check redundant power supplies on a refurbished server before you buy."><link rel="canonical" href="https://serverwale.github.io/server-buying-guides-india/server-psu-redundancy-guide.html"><style>
+:root{--ink:#1a2230;--muted:#5b6675;--brand:#0b5cab;--line:#e6e9ee}
+*{box-sizing:border-box}
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+max-width:820px;margin:0 auto;padding:28px 20px 70px;line-height:1.66;font-size:17px;background:#fff}
+header.site{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:26px}
+header.site a{color:var(--brand);text-decoration:none;font-weight:700;font-size:20px}
+header.site span{color:var(--muted);font-size:14px;display:block;margin-top:2px}
+h1{font-size:30px;line-height:1.25;margin:.2em 0 .5em}
+h2{font-size:22px;margin:1.5em 0 .5em;border-bottom:1px solid var(--line);padding-bottom:4px}
+a{color:var(--brand)}
+ul{padding-left:1.3em}
+footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:14px}
+footer a{color:var(--brand)}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+</style></head><body><header class="site"><a href="https://serverwale.com">Serverwale</a><span>Refurbished Servers, Workstations &amp; Storage — India · Buying Guides</span></header><a class="back" href="./">← All guides</a><h1>Server Power Supply Redundancy: N+1 vs N+N Explained (2026)</h1>
+<p>A single power supply is the most common single point of failure in a server that's otherwise fully redundant on drives and network. If the PSU dies and there's no second one to take over, the server goes down regardless of how good the RAID array behind it is.</p>
+<h2>What N+1 and N+N actually mean</h2>
+<p><b>N+1</b> means you have exactly one more power supply than the server needs to run at full load — if one fails, the remaining ones absorb the load without a hiccup, and the failed unit is hot-swapped without downtime. This is the standard for most production 1U/2U servers.</p>
+<p><b>N+N</b> (also called 2N) means full duplication — an entire second bank of power supplies equal to what's needed, typically fed from a separate circuit or UPS. This protects against not just a single PSU failure but an entire power feed failure, and is mostly seen on higher-end rack and blade chassis.</p>
+<h2>Why this matters more on refurbished hardware</h2>
+<p>PSUs are a wear part — fans and capacitors age, and a refurbished server's power supplies have already done real work in their first life. When you're buying <a href="https://serverwale.com/shop/now" target="_blank">refurbished servers</a>, it's worth explicitly checking that redundant units are present, both units test as healthy (not just physically installed), and hot-swap actually works, not just that the bays are populated.</p>
+<h2>What to check before you buy</h2>
+<ul>
+<li>Confirm the unit has 2 (or more) PSUs installed, not just empty redundant bays.</li>
+<li>Ask for a load test result, not just a visual/power-on check.</li>
+<li>Check wattage headroom — redundancy only works if a single PSU can actually carry full load alone, which matters more once you add GPUs or extra drives later.</li>
+</ul>
+<p>Every server we sell is tested on both PSUs before it ships, backed by our standard <a href="https://serverwale.com/server-amc-india" target="_blank">3-year warranty and AMC program</a>. Current tested inventory with PSU configuration listed per unit is on our <a href="https://serverwale.com/shop/now" target="_blank">shop page</a>.</p>
+<footer><strong>Serverwale</strong> — Refurbished enterprise servers &amp; workstations, India. Call <a href="https://serverwale.com">+91-87962-44410</a> · <a href="https://serverwale.com/shop/now">Shop refurbished servers</a> · <a href="https://serverwale.com">serverwale.com</a></footer></body></html>
