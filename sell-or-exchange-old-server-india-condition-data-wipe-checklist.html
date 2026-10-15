@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sell or Exchange an Old Server in India: Value and Data-Wipe Checklist</title><meta name="description" content="Sell or exchange an old server in India: identify, grade condition, wipe data per NIST SP 800-88 Rev. 2, and compare cash sale with exchange."><link rel="canonical" href="https://serverwale.github.io/server-buying-guides-india/sell-or-exchange-old-server-india-condition-data-wipe-checklist.html"><style>
+:root{--ink:#1a2230;--muted:#5b6675;--brand:#0b5cab;--line:#e6e9ee}
+*{box-sizing:border-box}
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+max-width:820px;margin:0 auto;padding:28px 20px 70px;line-height:1.66;font-size:17px;background:#fff}
+header.site{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:26px}
+header.site a{color:var(--brand);text-decoration:none;font-weight:700;font-size:20px}
+header.site span{color:var(--muted);font-size:14px;display:block;margin-top:2px}
+h1{font-size:30px;line-height:1.25;margin:.2em 0 .5em}
+h2{font-size:22px;margin:1.5em 0 .5em;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{font-size:18px;margin:1.3em 0 .4em}
+a{color:var(--brand)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:#f3f6fb}
+ul{padding-left:1.3em}
+.idx li{margin:.5em 0}
+footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:14px}
+footer a{color:var(--brand)}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+</style></head><body><header class="site"><a href="https://serverwale.com">Serverwale</a><span>Refurbished Servers, Workstations &amp; Storage — India · Buying Guides</span></header><a class="back" href="./">← All guides</a><h1>How to Sell or Exchange an Old Server in India: Condition, Data Wipe and Paperwork Checklist</h1>
+
+<p>To sell or exchange an old server in India, do four things in this order: identify the machine exactly (brand, model, serial number and configuration), grade its condition honestly, sanitise every drive and reset the management settings, and then choose between a cash sale and an exchange against new hardware. This checklist covers each step, what usually decides the value, and how Serverwale&rsquo;s <a href="https://serverwale.com/exchange-upgrade">exchange of an old server</a> works. For the wider decommissioning picture, read our <a href="./server-decommissioning-data-wiping-guide.html">server decommissioning and data wiping guide</a>.</p>
+
+<h2>Step 1: identify the server and record the serial numbers</h2>
+<p>Buyers value a server by brand, model, generation and what is inside it, so write down the exact model, the CPU, RAM, drives, RAID card and power supplies, and read the serial number from the label and the management controller. A serial lookup also tells the buyer the machine&rsquo;s age; see <a href="https://serverwale.com/blog/how-to-check-server-warranty-by-serial-number-dell-hpe-lenovo-ibm-cisco-supermicro-india">how to check server warranty by serial number</a> for Dell, HPE, Lenovo, IBM, Cisco and Supermicro.</p>
+
+<h2>Step 2: grade the condition honestly</h2>
+<p>Serverwale&rsquo;s exchange page states that the brand and working condition of the old server decide the discount, and lists four bands. These are discounts on a new ProStation Systems server or workstation, and the final figure is confirmed after physical inspection:</p>
+<table><thead><tr><th>Condition</th><th>What it means (per Serverwale)</th><th>Exchange discount</th></tr></thead><tbody>
+<tr><td>Excellent</td><td>Fully functional, with all components (CPU, RAM, PSU, drives), no physical damage</td><td>Up to 20%</td></tr>
+<tr><td>Good</td><td>Working, minor wear, all core components present</td><td>Up to 15%</td></tr>
+<tr><td>Fair</td><td>Functional but some components missing, or minor hardware faults</td><td>Up to 10%</td></tr>
+<tr><td>Older / worn</td><td>Heavily used but still a branded, powering-on enterprise server</td><td>Up to 5%, case by case</td></tr>
+</tbody></table>
+<p>Missing drives, RAM or power supplies lower the value, so keep the original parts together and say clearly what is absent. Serverwale accepts branded enterprise servers such as Dell PowerEdge, HP and HPE ProLiant, IBM and Lenovo System x and ThinkSystem, Cisco UCS and Supermicro, as well as blade chassis, tower workstations, and storage and network equipment.</p>
+
+<h2>Step 3: sanitise the data before the machine leaves</h2>
+<p>NIST SP 800-88 Rev. 2, <em>Guidelines for Media Sanitization</em> (final in September 2025; its FAQ was published 16 July 2026), describes three methods: <strong>clear</strong>, <strong>purge</strong> and <strong>destroy</strong>. Practical points from NIST&rsquo;s FAQ:</p>
+<ul>
+<li>Sanitise the whole device. NIST says sanitising the entire storage device is always preferred because of overprovisioning and bad-block remapping.</li>
+<li>Multi-pass overwriting is unnecessary. For modern storage, NIST says legacy multi-pass practices give very little protection and can shorten flash media life; clear typically means a single overwrite pass or a manufacturer factory reset.</li>
+<li>Match the method to how sensitive the data is and where the drive is going. NIST&rsquo;s decision flow uses both, so use a stronger method when drives leave your organisation.</li>
+<li>Verify the result. NIST separates verification (checking the technique completed without errors) from validation (deciding the outcome is acceptable for the data).</li>
+</ul>
+<p>Also reset the management controller (iDRAC, iLO, XClarity or IPMI) and BIOS passwords, clear RAID configurations as needed, and remove any SD or USB boot media. Ask any buyer for their wipe method and a written confirmation. Serverwale&rsquo;s exchange page states that it provides a certified data wipe; confirm what the certificate covers before you rely on it.</p>
+
+<h2>Step 4: sell for cash or exchange against new hardware</h2>
+<table><thead><tr><th>Route</th><th>Suits you if</th><th>Watch for</th></tr></thead><tbody>
+<tr><td>Sell to a dealer</td><td>You want money and no new purchase</td><td>Get the valuation in writing, with serials listed</td></tr>
+<tr><td>Exchange against a new server</td><td>You are already upgrading</td><td>Serverwale applies the exchange value only towards a new ProStation Systems build, not a refurbished unit</td></tr>
+<tr><td>Keep it as a spare or lab machine</td><td>It still has a useful role</td><td>Support and parts get harder as the model ages</td></tr>
+</tbody></table>
+<p>If you want refurbished hardware rather than a new build, buy it separately from <a href="https://serverwale.com/refurbished-servers-india">refurbished servers in India</a>; our guide to <a href="https://serverwale.com/blog/refurbished-vs-used-vs-open-box-server-difference-india">refurbished vs used vs open-box servers</a> explains the differences. For new custom hardware, see <a href="https://serverwale.com/prostation">ProStation Systems</a>.</p>
+
+<h2>How the Serverwale exchange works</h2>
+<ol>
+<li>Share the old server&rsquo;s brand, model and condition on WhatsApp with photos, or through the form.</li>
+<li>Serverwale evaluates it and, if it is branded and working, confirms a discount. The page states a quote within 24 hours.</li>
+<li>Hand over the old server, apply the discount and take delivery of the new ProStation Systems machine, which carries a 1-year warranty with extended warranty available at extra cost.</li>
+</ol>
+<p>More reading: Serverwale&rsquo;s <a href="https://serverwale.com/blog/sell-old-server-india-trade-in-value-guide">guide to the trade-in value of an old server in India</a>, the <a href="https://serverwale.com/refurbished-server-price-index-india">refurbished server price index</a> for market context, and the <a href="https://serverwale.com/dell-vs-hp-servers">Dell vs HP servers comparison</a> if you are choosing the replacement. For IBM and Lenovo gear see <a href="https://serverwale.com/ibm-rack-servers-india">IBM rack servers</a> and <a href="https://serverwale.com/refurbished-lenovo-servers-india">refurbished Lenovo servers</a>; for Cisco, <a href="https://serverwale.com/cisco-servers-india">Cisco UCS servers</a>. Larger clear-outs can be planned with the <a href="https://serverwale.com/enterprise-solution">enterprise solutions team</a>, and servers you keep can be covered by <a href="https://serverwale.com/server-amc-india">server AMC</a>. Questions: <a href="https://serverwale.com/contact">contact Serverwale</a> or call +91-87962-44410.</p>
+<p><small>Sources: NIST SP 800-88 Rev. 2, Guidelines for Media Sanitization, and the NIST SP 800-88r2 FAQ (published 16 July 2026); Serverwale exchange and upgrade page. Discounts are indicative and confirmed after inspection. Position as of 15 October 2026.</small></p>
+
+<h2>Frequently asked questions</h2>
+<h3>How do I sell an old server in India?</h3>
+<p>Identify the exact model and serial number, grade the condition honestly, sanitise all drives and reset the management settings, then get a written valuation from a dealer or choose an exchange against new hardware. Keep the original CPU, RAM, power supplies and drives together, because missing parts lower the value.</p>
+<h3>What affects the value of an old server?</h3>
+<p>Brand, model and generation, whether it powers on and works, whether all components are present, and physical condition. Serverwale's exchange page states that the brand and condition decide the discount, from up to 20% for excellent condition down to up to 5% for older, worn servers.</p>
+<h3>How should I wipe a server before selling it?</h3>
+<p>Follow NIST SP 800-88 Rev. 2: sanitise the whole storage device using clear, purge or destroy as the data sensitivity and destination require, and verify the result. NIST says multi-pass overwriting is unnecessary for modern storage; clear is typically one overwrite pass or a manufacturer factory reset.</p>
+<h3>Can I exchange an old server for a refurbished one at Serverwale?</h3>
+<p>No. Serverwale's exchange value is applied only towards a new ProStation Systems server or workstation. Refurbished servers are sold separately.</p>
+<h3>Which brands does Serverwale accept for exchange?</h3>
+<p>Branded enterprise servers: Dell PowerEdge, PowerVault and Precision, HP and HPE ProLiant and Apollo, IBM and Lenovo System x and ThinkSystem, Cisco UCS, Catalyst and Nexus, Supermicro, and NetApp and EMC storage. Blade chassis, tower workstations, NAS, SAN and network equipment are also listed.</p>
+<h3>Is the exchange discount fixed?</h3>
+<p>No. The percentages are the maximum for each condition band and are confirmed after physical inspection, subject to availability of the model you want.</p>
+<footer><strong>Serverwale</strong> — Refurbished enterprise servers &amp; workstations, India. Call <a href="https://serverwale.com">+91-87962-44410</a> · <a href="https://serverwale.com/shop/now">Shop refurbished servers</a> · <a href="https://serverwale.com">serverwale.com</a></footer>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I sell an old server in India?", "acceptedAnswer": {"@type": "Answer", "text": "Identify the exact model and serial number, grade the condition honestly, sanitise all drives and reset the management settings, then get a written valuation from a dealer or choose an exchange against new hardware. Keep the original CPU, RAM, power supplies and drives together, because missing parts lower the value."}}, {"@type": "Question", "name": "What affects the value of an old server?", "acceptedAnswer": {"@type": "Answer", "text": "Brand, model and generation, whether it powers on and works, whether all components are present, and physical condition. Serverwale's exchange page states that the brand and condition decide the discount, from up to 20% for excellent condition down to up to 5% for older, worn servers."}}, {"@type": "Question", "name": "How should I wipe a server before selling it?", "acceptedAnswer": {"@type": "Answer", "text": "Follow NIST SP 800-88 Rev. 2: sanitise the whole storage device using clear, purge or destroy as the data sensitivity and destination require, and verify the result. NIST says multi-pass overwriting is unnecessary for modern storage; clear is typically one overwrite pass or a manufacturer factory reset."}}, {"@type": "Question", "name": "Can I exchange an old server for a refurbished one at Serverwale?", "acceptedAnswer": {"@type": "Answer", "text": "No. Serverwale's exchange value is applied only towards a new ProStation Systems server or workstation. Refurbished servers are sold separately."}}, {"@type": "Question", "name": "Which brands does Serverwale accept for exchange?", "acceptedAnswer": {"@type": "Answer", "text": "Branded enterprise servers: Dell PowerEdge, PowerVault and Precision, HP and HPE ProLiant and Apollo, IBM and Lenovo System x and ThinkSystem, Cisco UCS, Catalyst and Nexus, Supermicro, and NetApp and EMC storage. Blade chassis, tower workstations, NAS, SAN and network equipment are also listed."}}, {"@type": "Question", "name": "Is the exchange discount fixed?", "acceptedAnswer": {"@type": "Answer", "text": "No. The percentages are the maximum for each condition band and are confirmed after physical inspection, subject to availability of the model you want."}}]}</script></body></html>
