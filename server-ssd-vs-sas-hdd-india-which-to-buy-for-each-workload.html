@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Server SSD vs SAS HDD India: Which to Buy per Workload</title><meta name="description" content="Server SSD vs SAS HDD in India: datasheet IOPS and throughput, DWPD and TBW explained, workload chooser and refurbished drive checks."><link rel="canonical" href="https://serverwale.github.io/server-buying-guides-india/server-ssd-vs-sas-hdd-india-which-to-buy-for-each-workload.html"><style>
+:root{--ink:#1a2230;--muted:#5b6675;--brand:#0b5cab;--line:#e6e9ee}
+*{box-sizing:border-box}
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+max-width:820px;margin:0 auto;padding:28px 20px 70px;line-height:1.66;font-size:17px;background:#fff}
+header.site{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:26px}
+header.site a{color:var(--brand);text-decoration:none;font-weight:700;font-size:20px}
+header.site span{color:var(--muted);font-size:14px;display:block;margin-top:2px}
+h1{font-size:30px;line-height:1.25;margin:.2em 0 .5em}
+h2{font-size:22px;margin:1.5em 0 .5em;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{font-size:18px;margin:1.3em 0 .4em}
+a{color:var(--brand)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:#f3f6fb}
+ul{padding-left:1.3em}
+.idx li{margin:.5em 0}
+footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:14px}
+footer a{color:var(--brand)}
+.back{display:inline-block;margin-bottom:18px;font-size:14px}
+</style></head><body><header class="site"><a href="https://serverwale.com">Serverwale</a><span>Refurbished Servers, Workstations &amp; Storage — India · Buying Guides</span></header><a class="back" href="./">← All guides</a><h1>Server SSD vs SAS HDD in India: Which to Buy for Each Workload</h1>
+
+<p>For a server, use enterprise SSDs for data that is read and written constantly (operating system, databases, virtual machines, cache) and SAS or nearline HDDs for data that is large and mostly sequential (backups, archives, video and CCTV retention). Most servers end up with both, tiered by how hot the data is. This guide compares the two with published datasheet figures, explains endurance ratings, and shows how to choose drives for each workload. It supports the <a href="https://serverwale.com/server-ssd-vs-hdd">server SSD vs HDD comparison</a> on Serverwale and is written for IT buyers in India sizing storage for new or refurbished servers.</p>
+
+<h2>SSD vs SAS HDD: what the datasheets say</h2>
+<p>Two example datasheets show the typical gap. They describe new drives, so treat them as examples of the class rather than a promise for any particular used unit.</p>
+<table><thead><tr><th>Item</th><th>Enterprise SATA SSD (Micron 5400 PRO)</th><th>10K SAS HDD (Seagate Exos 10E2400)</th></tr></thead><tbody>
+<tr><td>Random 4 KB reads</td><td>about 95,000 IOPS at queue depth 32 (most capacities)</td><td>Rotational: 10,000 RPM, 2.9 ms average latency</td></tr>
+<tr><td>Sequential throughput</td><td>about 540 MB/s read, up to 520 MB/s write</td><td>279 to 136 MB/s sustained, outer to inner tracks (2.4 TB model)</td></tr>
+<tr><td>Interface</td><td>SATA, 2.5-inch and M.2</td><td>12 Gb/s SAS</td></tr>
+<tr><td>Capacities listed</td><td>240 GB to 7.68 TB</td><td>2.4 TB model used for this comparison</td></tr>
+<tr><td>Endurance and reliability metrics</td><td>Up to 1.5 DWPD for read-intensive models; MTTF 3 million hours; 5-year warranty</td><td>Annualised failure rate 0.44% as specified by Seagate; 5-year limited warranty</td></tr>
+</tbody></table>
+<p>The pattern is what matters: flash is far ahead on random operations and latency, while spinning disks trade speed for capacity and cost per terabyte. Figures vary by model and test conditions, so read the datasheet for the exact drive you are buying.</p>
+
+<h2>What DWPD and TBW mean, and why they matter for SSDs</h2>
+<p>SSD flash wears with writes, so enterprise SSDs state an endurance rating. <strong>DWPD</strong> (drive writes per day) is how much of the drive&rsquo;s capacity can be written each day over the warranty period; <strong>TBW</strong> (terabytes written) is the lifetime total. They convert: TBW = DWPD x capacity in TB x warranty years x 365. Endurance is a prediction, not a guarantee, and depends on workload and write amplification (see the SNIA and Micron endurance papers). A mostly-read workload such as a file server or web content suits a read-intensive SSD; a write-heavy database needs a higher-endurance drive.</p>
+<p>For refurbished drives, the rating is only half the story: you also need to know how much life is already used. NVMe drives report a &ldquo;percentage used&rdquo; value in their SMART log. Our hub guide on <a href="./check-refurbished-ssd-nvme-remaining-life.html">checking refurbished SSD and NVMe remaining life</a> shows how, and the <a href="./sas-vs-sata-vs-nvme-server-drives.html">SAS vs SATA vs NVMe guide</a> explains the interfaces.</p>
+
+<h2>Which drive for which workload</h2>
+<table><thead><tr><th>Workload</th><th>Use</th><th>Why</th></tr></thead><tbody>
+<tr><td>Databases, OLTP, virtual machines, VDI</td><td>Enterprise SSD (SAS or NVMe where the server supports it)</td><td>Random IOPS and latency decide the experience</td></tr>
+<tr><td>OS and hypervisor boot volume</td><td>Small SSD, often mirrored</td><td>Fast boot and patching; small capacity is enough</td></tr>
+<tr><td>Backup targets, archives</td><td>SAS or nearline HDD</td><td>Lowest cost per terabyte; sequential writes</td></tr>
+<tr><td>CCTV and NVR retention, media libraries</td><td>High-capacity HDD</td><td>Capacity-bound, sequential; see our <a href="./server-decommissioning-data-wiping-guide.html">decommissioning guide</a> for retired drives</td></tr>
+<tr><td>NAS or SAN with mixed data</td><td>HDD bulk tier plus SSD cache or tier</td><td>Balance cost and speed; see the <a href="./san-vs-nas-storage.html">SAN vs NAS guide</a></td></tr>
+</tbody></table>
+<p>RAID protects against a failed drive, not against deletion or ransomware, whichever drive type you choose; see <a href="./raid-is-not-a-backup.html">RAID is not a backup</a> and the <a href="./server-raid-levels-explained.html">RAID levels guide</a>.</p>
+
+<h2>Compatibility checks before you buy drives</h2>
+<ul>
+<li><strong>Controller and backplane:</strong> confirm the server&rsquo;s RAID or HBA controller and backplane support SAS, SATA or NVMe drives of the type you plan to use.</li>
+<li><strong>Caddies:</strong> branded servers use drive caddies. Serverwale states that it supplies drives with genuine OEM caddies for Dell, HP, IBM/Lenovo and Supermicro systems.</li>
+<li><strong>Form factor:</strong> 2.5-inch and 3.5-inch bays differ, so match capacity needs to the bay type.</li>
+<li><strong>Drive health:</strong> ask for SMART data on any used drive, and a written warranty.</li>
+</ul>
+
+<h2>Pricing and where to buy in India</h2>
+<p>Drive prices change with capacity, interface and stock, so we do not quote them here. Serverwale publishes current lists: see the price guides for <a href="https://serverwale.com/blog/dell-server-ssds-price-list-in-india">Dell server SSDs</a>, <a href="https://serverwale.com/blog/dell-hp-ibm-server-ssd-price-list-in-india">Dell, HP and IBM server SSDs</a>, <a href="https://serverwale.com/blog/dell-server-hard-drives-price-list">Dell server hard drives</a>, <a href="https://serverwale.com/blog/hp-server-hard-drives-price-list">HP server hard drives</a> and the <a href="https://serverwale.com/blog/dell-server-hard-drive-ssd-price-guide-india-2026">Dell drive price guide for 2026</a>, plus the <a href="https://serverwale.com/2tb-sas-hdd-india">2 TB SAS HDD page</a>. For RAID cards see the <a href="https://serverwale.com/blog/raid-controller-price-guide-india-2026">RAID controller price guide</a>. Serverwale&rsquo;s policy page states a minimum 1-year hardware warranty on refurbished servers, with extended warranty for 2 additional years at extra cost.</p>
+<p>Planning a whole server rather than just drives? Start with <a href="https://serverwale.com/refurbished-servers-india">refurbished servers in India</a>, the <a href="https://serverwale.com/dell-vs-hp-servers">Dell vs HP servers comparison</a> and the <a href="https://serverwale.com/refurbished-server-price-index-india">refurbished server price index</a>, or ask the <a href="https://serverwale.com/enterprise-solution">enterprise solutions team</a> to size a storage mix for your workload. Support for older systems is covered by <a href="https://serverwale.com/server-amc-india">server AMC</a>.</p>
+<p><small>Sources: Micron, 5400 SATA SSD technical product specification and product brief; Seagate, Exos 10E2400 data sheet; SNIA, Endurance of NVMe, SAS and SATA SSDs white paper; Micron and Kioxia endurance briefs; Serverwale SSD vs HDD page and policy page. Datasheet figures are for new drives and vary by model; confirm specifications for the exact drive. Position as of 15 October 2026.</small></p>
+
+<h2>Frequently asked questions</h2>
+<h3>Is an SSD always better than an HDD in a server?</h3>
+<p>No. SSDs are far faster for random reads and writes and have lower latency, which suits databases, virtual machines and boot volumes. HDDs cost less per terabyte and give more capacity per drive, which suits backups, archives and video retention. Most servers use both.</p>
+<h3>What does DWPD mean on an enterprise SSD?</h3>
+<p>DWPD means drive writes per day: how many times the full capacity of the drive can be written each day over the warranty period. TBW is the lifetime total, and TBW equals DWPD times capacity in terabytes times warranty years times 365. Both are predictions that depend on workload.</p>
+<h3>How do I check how much life a refurbished SSD has left?</h3>
+<p>Read the drive's SMART data. NVMe drives report a percentage-used value in the SMART log, and other drives expose wear indicators that vary by vendor. Ask the seller for the SMART report and a written warranty before buying a used SSD.</p>
+<h3>Which is better for a database server, SAS HDD or SSD?</h3>
+<p>An enterprise SSD. Databases depend on random IOPS and low latency, where flash is far ahead of a 10K SAS disk. Keep backups on lower-cost HDDs.</p>
+<h3>Can I mix SSDs and HDDs in one server?</h3>
+<p>Often yes, if the controller and backplane support both. A common design puts the OS and hot data on SSDs and bulk data on HDDs, or uses SSDs as a cache or tier in front of HDDs. Confirm support for your exact server and controller.</p>
+<h3>Does Serverwale supply drives with OEM caddies?</h3>
+<p>Serverwale states that it supplies tested enterprise SSDs and server SAS HDDs with genuine OEM caddies for Dell, HP, IBM/Lenovo and Supermicro servers. Confirm the exact model and caddy when you order.</p>
+<footer><strong>Serverwale</strong> — Refurbished enterprise servers &amp; workstations, India. Call <a href="https://serverwale.com">+91-87962-44410</a> · <a href="https://serverwale.com/shop/now">Shop refurbished servers</a> · <a href="https://serverwale.com">serverwale.com</a></footer>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is an SSD always better than an HDD in a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. SSDs are far faster for random reads and writes and have lower latency, which suits databases, virtual machines and boot volumes. HDDs cost less per terabyte and give more capacity per drive, which suits backups, archives and video retention. Most servers use both."}}, {"@type": "Question", "name": "What does DWPD mean on an enterprise SSD?", "acceptedAnswer": {"@type": "Answer", "text": "DWPD means drive writes per day: how many times the full capacity of the drive can be written each day over the warranty period. TBW is the lifetime total, and TBW equals DWPD times capacity in terabytes times warranty years times 365. Both are predictions that depend on workload."}}, {"@type": "Question", "name": "How do I check how much life a refurbished SSD has left?", "acceptedAnswer": {"@type": "Answer", "text": "Read the drive's SMART data. NVMe drives report a percentage-used value in the SMART log, and other drives expose wear indicators that vary by vendor. Ask the seller for the SMART report and a written warranty before buying a used SSD."}}, {"@type": "Question", "name": "Which is better for a database server, SAS HDD or SSD?", "acceptedAnswer": {"@type": "Answer", "text": "An enterprise SSD. Databases depend on random IOPS and low latency, where flash is far ahead of a 10K SAS disk. Keep backups on lower-cost HDDs."}}, {"@type": "Question", "name": "Can I mix SSDs and HDDs in one server?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes, if the controller and backplane support both. A common design puts the OS and hot data on SSDs and bulk data on HDDs, or uses SSDs as a cache or tier in front of HDDs. Confirm support for your exact server and controller."}}, {"@type": "Question", "name": "Does Serverwale supply drives with OEM caddies?", "acceptedAnswer": {"@type": "Answer", "text": "Serverwale states that it supplies tested enterprise SSDs and server SAS HDDs with genuine OEM caddies for Dell, HP, IBM/Lenovo and Supermicro servers. Confirm the exact model and caddy when you order."}}]}</script></body></html>
