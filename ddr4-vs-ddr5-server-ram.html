@@ -26,13 +26,13 @@ footer a{color:var(--brand)}
 <h2>Which servers use DDR4 vs DDR5?</h2>
 <p>This is the part that actually drives your decision, because the RAM follows the platform:</p>
 <ul>
-<li><b>DDR4 platforms:</b> Intel Xeon Scalable 1st &amp; 2nd Gen (Skylake/Cascade Lake) and 3rd Gen (Ice Lake); AMD EPYC 7001/7002/7003 (Naples/Rome/Milan). This covers the vast majority of <a href="https://serverwale.com/dell-servers" target="_blank">Dell PowerEdge servers</a> like the R740/R640/R750 and <a href="https://serverwale.com/hpe-servers" target="_blank">HPE ProLiant servers</a> like the DL380 Gen10.</li>
+<li><b>DDR4 platforms:</b> Intel Xeon Scalable 1st &amp; 2nd Gen (Skylake/Cascade Lake) and 3rd Gen (Ice Lake); AMD EPYC 7001/7002/7003 (Naples/Rome/Milan). This covers the vast majority of <a href="https://serverwale.com/dell-vs-hp-servers" target="_blank">Dell PowerEdge servers</a> like the R740/R640/R750 and <a href="https://serverwale.com/dell-vs-hp-servers" target="_blank">HPE ProLiant servers</a> like the DL380 Gen10.</li>
 <li><b>DDR5 platforms:</b> Intel Xeon 4th/5th Gen (Sapphire Rapids/Emerald Rapids) and AMD EPYC 9004 (Genoa)/9005 (Turin). These are the newest, priciest generations.</li>
 </ul>
 <p>So in practice: if you are buying a tested, value-focused server today, you are almost certainly buying a DDR4 machine — and that is perfectly fine for the overwhelming majority of workloads.</p>
 <h2>Does the speed difference actually matter for you?</h2>
 <p>For most real-world server jobs — virtualization, databases, web/app hosting, file and storage, AMC-managed fleets — DDR4 bandwidth is not the bottleneck. CPU cores, storage IOPS, and network usually limit you first.</p>
-<p>DDR5's bandwidth advantage shows up in specific, memory-bound workloads: large in-memory databases, HPC/simulation, and high-core-count <a href="https://serverwale.com/ai-servers" target="_blank">AI servers</a> doing inference or training where every core needs memory at once. If that is your workload and budget allows, a DDR5 platform earns its premium. If not, you are paying for headroom you will not use.</p>
+<p>DDR5's bandwidth advantage shows up in specific, memory-bound workloads: large in-memory databases, HPC/simulation, and high-core-count <a href="https://serverwale.com/ai-infrastructure-india" target="_blank">AI servers</a> doing inference or training where every core needs memory at once. If that is your workload and budget allows, a DDR5 platform earns its premium. If not, you are paying for headroom you will not use.</p>
 <h2>ECC: the part that matters most for servers</h2>
 <p>Whatever generation you pick, server RAM must be <b>ECC (Error-Correcting Code)</b> — registered (RDIMM) or load-reduced (LRDIMM). ECC detects and corrects single-bit memory errors on the fly, which is the difference between a silently corrupted database and a clean run. Desktop (non-ECC) RAM has no place in a production server. Both DDR4 and DDR5 server modules are ECC; DDR5 additionally has on-die ECC, but that is not a substitute for full system ECC.</p>
 <h2>DDR4 vs DDR5 server RAM — side by side</h2>
@@ -56,7 +56,7 @@ footer a{color:var(--brand)}
 <li><b>Virtualization host (10-20 VMs) / mid databases:</b> 256-384GB.</li>
 <li><b>Heavy virtualization / large databases / analytics:</b> 512GB-1TB+.</li>
 </ul>
-<p>DDR4 makes these capacities cheap to hit. For indicative pricing on RAM and full configs, see our <a href="https://serverwale.com/refurbished-server-price-index-india" target="_blank">refurbished server price index</a>, and remember an annual <a href="https://serverwale.com/server-amc" target="_blank">server AMC</a> covers memory faults on existing fleets too.</p>
+<p>DDR4 makes these capacities cheap to hit. For indicative pricing on RAM and full configs, see our <a href="https://serverwale.com/refurbished-server-price-index-india" target="_blank">refurbished server price index</a>, and remember an annual <a href="https://serverwale.com/server-amc-india" target="_blank">server AMC</a> covers memory faults on existing fleets too.</p>
 <h2>Frequently Asked Questions</h2>
 <p><b>Can I mix DDR4 and DDR5 RAM in one server?</b> No. DDR4 and DDR5 use different slots and different platforms — a server takes one or the other, decided by its CPU and motherboard. You also should not mix RDIMM and LRDIMM or wildly different module sizes within the same server.</p>
 <p><b>Is DDR4 server RAM obsolete in 2026?</b> Not at all. DDR4 remains the mainstream, best-value choice and is fully supported for years. The enormous installed base of Xeon and EPYC DDR4 servers keeps it relevant, cheap, and easy to source.</p>

@@ -33,7 +33,7 @@ footer a{color:var(--brand)}
 <p>RAID 6 is like RAID 5 but with two parity blocks, so it survives <b>two</b> simultaneous drive failures. You give up two drives' capacity, but for large arrays of high-capacity disks — where rebuilds take many hours and a second failure is a real risk — RAID 6 is the safer choice. It is the go-to for big NAS and bulk storage where you cannot afford a rebuild-window failure.</p>
 <h2>RAID 10 — mirror + stripe (best of both)</h2>
 <p>RAID 10 (1+0) mirrors pairs of drives and stripes across them. You get excellent read and write speed plus strong redundancy — it can survive multiple failures as long as no mirrored pair loses both members. The cost is capacity: you lose half. This is the default for performance-critical databases, virtualization hosts, and high-IOPS workloads where both speed and uptime matter.</p>
-<p>For demanding database and VM hosts, refurbished <a href="https://serverwale.com/dell-servers" target="_blank">Dell PowerEdge servers</a> and <a href="https://serverwale.com/hpe-servers" target="_blank">HPE ProLiant servers</a> ship with enterprise RAID controllers that handle RAID 10 with battery-backed cache for safe, fast writes.</p>
+<p>For demanding database and VM hosts, refurbished <a href="https://serverwale.com/dell-vs-hp-servers" target="_blank">Dell PowerEdge servers</a> and <a href="https://serverwale.com/dell-vs-hp-servers" target="_blank">HPE ProLiant servers</a> ship with enterprise RAID controllers that handle RAID 10 with battery-backed cache for safe, fast writes.</p>
 <h2>RAID levels compared</h2>
 <table border="1" cellpadding="6" cellspacing="0"><thead><tr>
 <th>RAID</th>
@@ -56,7 +56,7 @@ footer a{color:var(--brand)}
 <li><b>Big SAN/NAS bulk storage:</b> RAID 6 (or RAID 60 at scale).</li>
 <li><b>Disposable scratch data only:</b> RAID 0.</li>
 </ul>
-<p>If you are building shared block storage, our <a href="https://serverwale.com/san-storage" target="_blank">SAN storage</a> arrays come pre-configured with the right RAID for your workload. For indicative drive and array pricing, see the <a href="https://serverwale.com/refurbished-server-price-index-india" target="_blank">refurbished server price index</a>, and an annual <a href="https://serverwale.com/server-amc" target="_blank">server AMC</a> covers RAID controller and disk faults on your existing fleet.</p>
+<p>If you are building shared block storage, our <a href="https://serverwale.com/san-storage-price-list-india" target="_blank">SAN storage</a> arrays come pre-configured with the right RAID for your workload. For indicative drive and array pricing, see the <a href="https://serverwale.com/refurbished-server-price-index-india" target="_blank">refurbished server price index</a>, and an annual <a href="https://serverwale.com/server-amc-india" target="_blank">server AMC</a> covers RAID controller and disk faults on your existing fleet.</p>
 <h2>Frequently Asked Questions</h2>
 <p><b>Is RAID a substitute for backups?</b> No. RAID protects against drive failure but not against accidental deletion, file corruption, ransomware, or controller failure. Always keep independent backups in addition to RAID.</p>
 <p><b>Which RAID is fastest?</b> RAID 0 is fastest but has zero protection. Among safe levels, RAID 10 gives the best balance of read and write speed, which is why it is preferred for databases and virtualization.</p>
